@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["*.spec.?(m)js"],
+      "rules": { "no-empty-function": 0 },
+      "globals": {
+        "afterAll": true,
+        "beforeAll": true,
+        "catchAndMatch": true,
+        "jest": true,
+        "waitForExpect": true
+      }
+    }
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": { "ecmaFeatures": { "jsx": true } },
+  "plugins": ["custom-rules", "jest", "sort-imports-es6-autofix"],
+  "rules": {
+    "jest/no-focused-tests": 2,
+    "no-console": 2,
+    "no-restricted-imports": [
+      2,
+      {
+        "patterns": [
+          {
+            "group": ["../../*"],
+            "message": "Do not use relative paths for imports."
+          }
+        ]
+      }
+    ],
+    "no-unused-expressions": 0,
+    "prefer-const": 2,
+    "prefer-template": 2,
+    "react/display-name": 0,
+    "sort-imports-es6-autofix/sort-imports-es6": [2, { "ignoreCase": true }]
+  },
+  "settings": {
+    "react": { "version": "detect" }
+  }
+}

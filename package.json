@@ -1,0 +1,45 @@
+{
+  "name": "practice-webapp",
+  "private": true,
+  "scripts": {
+    "dev": "next -p 8080",
+    "build": "next build",
+    "start": "next start -p 8080",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch --detectOpenHandles --runInBand",
+    "lint": "eslint src/",
+    "lint:fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "7.x.x",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "7.x.x",
+    "bootstrap": "5.x.x",
+    "classnames": "2.x.x",
+    "eslint": "8.x.x",
+    "eslint-plugin-custom-rules": "0.x.x",
+    "eslint-plugin-jest": "26.x.x",
+    "eslint-plugin-prettier": "4.x.x",
+    "eslint-plugin-react": "7.x.x",
+    "eslint-plugin-sort-imports-es6-autofix": "0.x.x",
+    "lodash": "4.x.x",
+    "next": "12.x.x",
+    "prop-types": "15.x.x",
+    "qs": "6.x.x",
+    "react": "18.x.x",
+    "react-bootstrap": "2.x.x",
+    "react-dom": "18.x.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@testing-library/react": "13.x.x",
+    "@testing-library/user-event": "^14.2.5",
+    "babel-jest": "^28.1.3",
+    "babel-plugin-module-resolver": "4.x.x",
+    "eslint-config-prettier": "8.x.x",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "28.x.x",
+    "jest-environment-jsdom": "28.x.x",
+    "prettier": "2.x.x"
+  }
+}
