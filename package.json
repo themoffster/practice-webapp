@@ -2,7 +2,7 @@
   "name": "practice-webapp",
   "private": true,
   "scripts": {
-    "dev": "next -p 8080",
+    "dev": "node --inspect=0 server.js",
     "build": "next build",
     "start": "next start -p 8080",
     "test": "jest --runInBand",
@@ -22,6 +22,7 @@
     "eslint-plugin-prettier": "4.x.x",
     "eslint-plugin-react": "7.x.x",
     "eslint-plugin-sort-imports-es6-autofix": "0.x.x",
+    "express": "^4.18.1",
     "lodash": "4.x.x",
     "next": "12.x.x",
     "prop-types": "15.x.x",

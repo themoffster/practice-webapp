@@ -6,9 +6,14 @@ const App = ({ Component, pageProps }) => {
   return <Component {...pageProps} />
 }
 
-App.getInitialProps = async (appContext) => {
-  const { req = {}, res } = appContext.ctx
-  return {}
+App.getInitialProps = async ({ Component, ctx }) => {
+  const pageProps = Component.getInitialProps
+    ? await Component.getInitialProps({ ...ctx })
+    : {}
+
+  return {
+    pageProps,
+  }
 }
 
 App.propTypes = {
