@@ -5,6 +5,7 @@ import React from 'react'
 const PatientsRoute = (props) => <PatientsListPage {...props} />
 
 PatientsRoute.getInitialProps = async ({ req, res } = {}) => {
+  console.log('@@@@@@@@@@@@@@@@@@@@@@@')
   const { data: patients, error: patientsError } = await getAllPatients({
     req,
     res,
