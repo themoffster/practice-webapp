@@ -1,6 +1,13 @@
-import LandingPage from 'src/components/LandingPage/LandingPage'
+import { LOGIN } from 'src/enums/routes'
 import React from 'react'
 
-const LandingRoute = () => <LandingPage />
+const IndexRoute = () => null
 
-export default LandingRoute
+export const getServerSideProps = () => ({
+  redirect: {
+    destination: LOGIN,
+    permanent: true,
+  },
+})
+
+export default IndexRoute
