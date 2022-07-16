@@ -1,4 +1,6 @@
 import { Button, Form } from 'react-bootstrap'
+import { LANDING } from 'src/enums/routes'
+import { routeAndScrollTo } from 'src/helpers/router'
 import React from 'react'
 
 const LoginPage = () => {
@@ -7,6 +9,7 @@ const LoginPage = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault()
+    routeAndScrollTo(LANDING)
   }
 
   return (
