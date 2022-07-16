@@ -7,6 +7,6 @@ const getWrapper = () => render(<LandingRoute />)
 describe('LandingRoute', () => {
   it('renders the page', () => {
     getWrapper()
-    expect(screen.getByText('foo')).not.toBeNull()
+    expect(screen.getByLabelText('All patients')).not.toBeNull()
   })
 })
