@@ -1,4 +1,4 @@
-import { ALL_PATIENTS } from 'src/enums/routes'
+import { ADD_PATIENTS, ALL_PATIENTS } from 'src/enums/routes'
 import { Button } from 'react-bootstrap'
 import { routeAndScrollTo } from 'src/helpers/router'
 import React from 'react'
@@ -12,6 +12,14 @@ const LandingPage = () => (
       }}
     >
       All patients
+    </Button>
+    <Button
+      aria-label="Add patient"
+      onClick={() => {
+        routeAndScrollTo(ADD_PATIENTS)
+      }}
+    >
+      Add patient
     </Button>
   </>
 )

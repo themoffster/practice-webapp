@@ -1,4 +1,4 @@
-import { ALL_PATIENTS } from 'src/enums/routes'
+import { ADD_PATIENTS, ALL_PATIENTS } from 'src/enums/routes'
 import { render, screen, waitFor } from '@testing-library/react'
 import { routeAndScrollTo } from 'src/helpers/router'
 import LandingPage from './LandingPage'
@@ -22,6 +22,14 @@ describe('LandingPage', () => {
     userEvent.click(screen.getByLabelText('All patients'))
     await waitFor(() =>
       expect(routeAndScrollTo).toHaveBeenCalledWith(ALL_PATIENTS)
+    )
+  })
+
+  it('routes to the add patient page on button click', async () => {
+    getWrapper()
+    userEvent.click(screen.getByLabelText('Add patient'))
+    await waitFor(() =>
+      expect(routeAndScrollTo).toHaveBeenCalledWith(ADD_PATIENTS)
     )
   })
 })
